@@ -1,11 +1,7 @@
-describe('My first test', () => {
-  it('Does not do much', () => {
-    expect(true).to.equl(true);
+describe('heading text', () => {
+  it('contains the correct title', () => {
+    cy.visit('http://localhost:3000/example-1');
+
+    cy.get('h1').invoke('text').should('equal', 'My Awesome Web Application');
   });
 });
-
-//  describe('My First Test', () => {
-//     it('Does not do much!', () => {
-//       expect(true).to.equal(false)
-//     })
-//   })
