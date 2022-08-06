@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/iuru2522/cypress-react-test/issues"
   },
-  "homepage": "https://github.com/iuru2522/cypress-react-test#readme"
+  "homepage": "https://github.com/iuru2522/cypress-react-test#readme",
+  "devDependencies": {
+    "cypress": "^10.4.0"
+  }
 }
