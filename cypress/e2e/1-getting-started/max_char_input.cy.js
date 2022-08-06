@@ -1,3 +1,5 @@
+//how to test inputss
+
 describe('Text box with max characters', () => {
   it('displays the appropriate remaining characters count', () => {
     cy.visit('http://localhost:3000/example-2');
@@ -11,5 +13,13 @@ describe('Text box with max characters', () => {
     cy.get('input').type(' my friend');
 
     cy.get('span').invoke('text').should('equal', '0');
+  });
+
+  it('prevents the user from typing more character once max is exceeded', () => {
+    cy.visit('http:localhost:3000/example-2');
+
+    cy.get('input').type('asdfghjklqwertyuio');
+
+    cy.get('input').should('have.attr', 'value', 'asdfghjklqwerty');
   });
 });
