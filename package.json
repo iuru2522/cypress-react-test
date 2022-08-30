@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/iuru2522/cypress-react-test#readme",
   "devDependencies": {
-    "cypress": "^10.4.0"
+    "cypress": "^10.7.0"
   }
 }

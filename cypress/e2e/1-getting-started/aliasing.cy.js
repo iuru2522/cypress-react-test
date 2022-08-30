@@ -24,12 +24,12 @@ describe('Text box with max characters', () => {
   });
 
   it('prevents the user from typing more character once max is exceeded', () => {
-    cy.visit('http:localhost:3000/example-3');
+    cy.visit('http://localhost:3000/example-3');
 
     cy.get('[data-cy="input-last-name"]').as('charInput');
-
-    cy.get('@charInput').type('asdfghjklqwertyuio');
-
-    cy.get('@charInput').should('have.attr', 'value', 'asdfghjklqwerty');
+    //@charInput alias
+    cy.get('@charInput').type('abcdefghijklmnopqrstuvwxyz');
+    //@charInput alias
+    cy.get('@charInput').should('have.attr', 'value', 'abcdefghijklmno');
   });
 });
